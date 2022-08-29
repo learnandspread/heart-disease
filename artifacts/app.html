@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script>/* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown menu if the user clicks outside of it
+        window.onclick = function (event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        burger = document.querySelector('.burger')
+        navbar = document.querySelector('.navbar')
+        navList = document.querySelector('.nav-list')
+        burger.addEventListener('click', () => {
+          navList.classList.toggle('v-class-resp')
+          navbar.classList.toggle('h-nav-resp')
+        })</script>
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <nav class="navbar bg h-nav-resp">
+        <ul class="nav-list v-class-resp">
+            <div class="logo"><a href="#"><img src="my_pic.png" alt=""></a></div>
+            <li><a class="border" href="#home">Home</a></li>
+            <li><a class="border" href="#About">About</a></li>
+            <li>
+                <div class="dropdown ">
+                    <button onclick="myFunction()" class="dropbtn border">Projects</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a class="scroll_text" href="#">Project Page</a>
+                        <a class="scroll_text" href="#">Supervised</a>
+                        <a class="scroll_text" href="#">Unsupervised</a>
+                        <a class="scroll_text" href="#">Computer vision</a>
+                        <a class="scroll_text" href="#">NLP</a>
+                    </div>
+                </div>
+            </li>
+            <li><a class="border" href="#ContactUs">Contact us</a></li>
+            <li><a href="https://www.linkedin.com/in/abdul-rehman-b85a00215/" target="_blank"><img
+                        class="linkedin image" src="linkedin.png" alt=""></a></li>
+            <li><a href="https://github.com/abdulrehmanmemon" target="_blank"><img class="github image"
+                        src="github.png" alt=""></a></li>
+        </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+</body>
+</html>
